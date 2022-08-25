@@ -1,0 +1,26 @@
+{{#each this}}
+  <ul class='one-country'>
+    <li class='one-country__item'>
+      <div class="flag-and-name">
+          <ul class="flag-and-name__list">
+            <li class="flag-and-name___list-item">
+                <img
+                src='{{flags.svg}}'
+                alt='flag of ${
+                name.official
+                }'
+                width='60'
+                height='40'
+                />
+            </li>
+            <li class='flag-and-name___list-item'>{{name.official}}</li>
+          </ul>
+      </div>
+    </li>
+    <li class='one-country__item'><span class="list__item--caption">Capital: </span>{{capital}}</li>
+    {{#each languages}}
+    <li class="one-country__item"><span class="list__item--caption">Languages: </span>{{this}}</li>
+    {{/each}}
+    <li class='one-country__item'><span class="list__item--caption">Population: </span>{{population}}</li>
+  </ul>
+{{/each}}
